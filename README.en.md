@@ -2,9 +2,10 @@
 
 [中文](README.md) · [Skill instructions](SKILL.en.md)
 
-Let Codex ask ChatGPT Pro in your browser, wait for the answer, and check its advice against your task. Useful for code reviews, difficult questions, and proposal reviews.
+Let Codex assign browser GPT-6 Pro analysis, code writing, or concrete deliverables, then retrieve, verify, and integrate the results. Codex decides the work and deliverable requirements; collaboration is not limited to advice.
 
-- Consults automatically when complex work benefits from independent analysis, without prior approval; permits necessary same-problem follow-ups and at most one automatic retry after a confirmed failed send.
+- Collaborates automatically when complex analysis or implementation would benefit, without prior approval; permits necessary same-problem follow-ups and at most one automatic retry after a confirmed failed send.
+- Codex supplies context and specifies deliverables, then performs local edits, validation, and Git commits within the original task authorization.
 - Hands long waits to a host scheduler and saves the answer and conversation link.
 - Pauses adoption of non-simple answers when thinking takes under two minutes or timing cannot be verified. This is a user-defined review rule, not proof of model quality or routing.
 
@@ -23,6 +24,8 @@ Codex selects this skill automatically when useful, or you can invoke it explici
 ```text
 $codex-autopro Ask GPT-6 Pro to review this proposal. Send once and report its conclusions alongside your verification.
 ```
+
+Concrete implementation can also be assigned: “Have Pro use the relevant code to implement this fix and provide a patch, then verify, apply, and validate it.”
 
 Requires a host with browser control, a signed-in account showing the target model, and a scheduler with browser recovery for unattended waiting. The skill supplies instructions, not those capabilities. If a requirement is unavailable, it reports the gap.
 

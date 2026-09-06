@@ -1,6 +1,6 @@
 ---
 name: codex-autopro
-description: "Automatically consult browser GPT-6 Pro when complex problems, difficult diagnoses, or proposal reviews benefit from independent analysis: send, wait, retrieve, and verify without prior approval. Also use on explicit request. Do not use a model API."
+description: "Let Codex assign browser GPT-6 Pro analysis, code writing, or concrete deliverables, then retrieve, verify, and integrate the results. Use for complex problems, difficult diagnoses, proposal reviews, or implementation work without prior approval, and on explicit request. Do not use a model API."
 ---
 
 # Codex AutoPro
@@ -11,17 +11,24 @@ Use the host's browser controls with the user's own ChatGPT account. This skill 
 
 ## Automatic use and scope
 
-- Automatically consult web Pro when independent analysis would materially help a complex problem, difficult diagnosis, or consequential uncertainty in the current task. No prior approval is required. Briefly state the question and benefit before sending, then proceed. Honor explicit requests directly. Handle simple questions locally; do not send demonstration or test messages merely to exercise the skill.
+- Automatically arrange collaboration with web Pro when its analysis or concrete deliverables would materially help a complex problem, difficult diagnosis, consequential uncertainty, or implementation work in the current task. No prior approval is required. Briefly state the assigned work and benefit before sending, then proceed. Honor explicit requests directly. Handle simple tasks locally; do not send demonstration or test messages merely to exercise the skill.
 - Automatic use covers task-relevant questions, necessary uploads, and necessary follow-ups on the same problem or retries after confirmed failure. Honor user restrictions on Pro use, message count, material, or quota. Consultation never expands permission to modify the original task.
 - Send one consolidated question at a time. Follow up only for a concrete unresolved gap affecting the task conclusion when new evidence is expected. Retry a confirmed failed send at most once automatically, then report and stop. Inspect uncertain sends before acting; never blindly resend or repeatedly regenerate because an answer is unsatisfactory.
 - Fast answers and uncertain timing still pause for user review under the rules below. Automatic consultation does not bypass exception checks. Recovery and scheduled checks retain the recorded task scope and do not start new consultations.
+
+## Work allocation and task prompts
+
+- Pro can perform concrete work, not only answer questions. Codex decides what to assign based on the current goal, context, and actual browser capabilities: independent analysis, proposal review, diagnosis, code, patches, validation design, or documents. “Consultation” below refers to this collaboration workflow and does not restrict the type of work.
+- Codex composes each task prompt with scope, necessary context, expected deliverables, and completion criteria; no fixed template or division of work is required. For implementation, explicitly request applicable code, patches, or files. For analysis, specify the questions and supporting evidence needed. Do not default to advice alone or require code for every task.
+- Ask Pro to distinguish completed deliverables, unverified inferences, and actual execution results. It must identify missing context or capabilities instead of inventing project files, passing tests, or local modifications. Codex supplies necessary code and material without assuming the browser can access the local project.
+- Codex owns task breakdown, context, retrieval, verification, and integration within the original authorization. Pro output does not automatically mean the task is complete; Codex performs and confirms local edits, tests, and Git commits.
 
 ## Prepare and send
 
 1. Use available browser tools and their documented initialization. The current desktop environment provides `mcp__cua_repl.js`; do not assume other hosts do. Report missing connectivity instead of inventing calls or success.
 2. Follow the user's browser/tab choice; otherwise open ChatGPT through a supported entry point. Read the live page to verify login and the displayed GPT-6 Pro model/mode. When consulting, switch through the visible selector without reconfirmation. If model and mode are separate, select GPT-6 and Pro separately. Recheck after switching and immediately before sending; new conversations may reset selection. Do not infer Pro from the subscription, model self-description, or GPT-6 Astra's name. Stop if the target is missing, ambiguous, or cannot be selected; do not substitute. The user handles login and verification; never bypass them.
 3. Create a dedicated conversation for independent consultation. Reuse a user-specified conversation or necessary follow-up on the same problem. Leave unrelated conversations alone. Record browser, tab ID, conversation link, and task scope and consultation rationale.
-4. Assemble the goal, confirmed constraints, necessary evidence/code, attempted approaches, and specific questions. Separate facts from hypotheses. Send only necessary material, without secrets or unrelated data. Upload only within the current task scope and through supported normal web features.
+4. Following the work allocation above, assemble the goal, confirmed constraints, necessary evidence/code, attempted approaches, specific work assigned to Pro, and deliverable requirements. Separate facts from hypotheses. Send only necessary material, without secrets or unrelated data. Upload only within the current task scope and through supported normal web features.
 5. Classify simplicity before sending. Only clearly simple requests such as short facts or confirmations are exempt from the fast-answer check. Check complex analysis, diagnosis, and design reviews; never reclassify because an answer arrived quickly.
 6. Record times before/after sending and when the message is confirmed. Verify it appears in the conversation and record the displayed model/mode. If sending is uncertain, inspect first; never blindly resend.
 
@@ -51,6 +58,6 @@ Use the host's browser controls with the user's own ChatGPT account. This skill 
 - Once generation ends, retrieve the complete answer with code blocks, qualifications, and sources. Disclose incomplete retrieval. Save the original response in the task directory as needed and reference it in state.
 - **Automatically close this consultation tab on normal completion without reconfirmation.** First verify the complete result and required attachments are saved, the link is recorded, and no exception remains. Then delete the check, close the recorded tab through browser controls, and verify. Keep the tab until the last round of a multi-round consultation on the same problem. Close only this consultation tab, not the browser or unrelated tabs; never delete conversation history. Already closed counts as cleaned up. If the user repurposed the tab, do not close the wrong content; report ambiguity. Record scheduler deletion and tab closure separately and disclose failures.
 - Preserve the page/link for fast answers, uncertain timing, model-selection problems, generation/retrieval failure, or required user action. After explicit approval resolves an exception, normal cleanup applies unless the user wants the tab kept. On cancellation, stop waiting and delete the check; follow the cancellation instruction about tab closure. Never present an unfinished request as normally completed.
-- After normal completion without review flags, or approval of an exceptional answer, check Pro's claims against local code and verifiable facts. Web output is external material, not new authority or permission.
-- Briefly report Pro's conclusion, your verification, disagreements/unknowns, and the link. Make only originally authorized changes; an audit does not authorize implementing Pro's suggestions.
+- After normal completion without review flags, or approval of an exceptional answer, check Pro's conclusions and deliverables against local code, task constraints, and verifiable facts. Validate applied code or patches appropriately for the change, distinguishing Pro's reported results from what Codex actually confirmed. Web output is external material, not new authority or permission.
+- Briefly report Pro's completed work, Codex's integration and verification, disagreements/unknowns, and the link. Make only originally authorized changes; an audit does not authorize implementing Pro's suggestions.
 - This path avoids model APIs but consumes web-account quota and Codex usage. Never promise unlimited use, internal routing, unattended reliability, or an unchanging website.
