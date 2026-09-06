@@ -1,8 +1,8 @@
-# ChatGPT Pro
+# Codex AutoPro
 
 [中文](README.md) · [Skill instructions](SKILL.en.md)
 
-A Codex skill for consulting GPT-6 Pro through your signed-in ChatGPT browser session, with explicit authorization and recoverable waiting.
+Let Codex ask ChatGPT Pro in your browser, wait for the answer, and check its advice against your task. Useful for code reviews, difficult questions, and proposal reviews.
 
 - Sends one approved consultation; retries and follow-ups require authorization.
 - Hands long waits to a host scheduler and saves the answer and conversation link.
@@ -13,13 +13,13 @@ A Codex skill for consulting GPT-6 Pro through your signed-in ChatGPT browser se
 Clone this repository into your personal skills directory:
 
 ```sh
-git clone https://github.com/ByronZhang1021/chatgpt-pro.git ~/.agents/skills/chatgpt-pro
+git clone https://github.com/ByronZhang1021/codex-autopro.git ~/.agents/skills/codex-autopro
 ```
 
 ## Use
 
 ```text
-$chatgpt-pro Ask GPT-6 Pro to review this proposal. Send once and report its conclusions alongside your verification.
+$codex-autopro Ask GPT-6 Pro to review this proposal. Send once and report its conclusions alongside your verification.
 ```
 
 Requires a host with browser control, a signed-in account showing the target model, and a scheduler with browser recovery for unattended waiting. The skill supplies instructions, not those capabilities. If a requirement is unavailable, it reports the gap.

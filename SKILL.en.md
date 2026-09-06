@@ -1,9 +1,9 @@
 ---
-name: chatgpt-pro
-description: "With explicit authorization, consult GPT-6 Pro through a signed-in ChatGPT browser session. Recover long waits, close the consultation tab on normal completion, and flag non-simple answers with under two minutes of thinking or uncertain timing. Never invoke automatically or call a paid model API."
+name: codex-autopro
+description: "With explicit authorization, automate a browser consultation with GPT-6 Pro: send a question, wait, retrieve the answer, and verify its advice. Use for approved Pro code reviews, difficult questions, or proposal reviews. Never send without authorization or use a model API."
 ---
 
-# ChatGPT Pro browser consultation
+# Codex AutoPro
 
 [中文](SKILL.md)
 

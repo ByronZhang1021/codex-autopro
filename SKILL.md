@@ -1,9 +1,9 @@
 ---
-name: chatgpt-pro
-description: "经用户明确授权，通过已登录的 ChatGPT 网页咨询 GPT-6 Pro；正常结束关闭咨询标签页，异常保留供检查，执行少于两分钟思考的异常检查。仅用于明确要求使用网页 Pro 或已批准的咨询，不自动调用，不使用付费模型 API。"
+name: codex-autopro
+description: "经明确授权，让 Codex 自动操作网页版 GPT-6 Pro，完成提问、等待、取回答案和核对建议。适合请求 Pro 检查代码、分析难题或审查方案。仅在用户要求或批准咨询后使用，不调用模型 API。"
 ---
 
-# 网页 GPT-6 Pro 咨询
+# Codex AutoPro · 网页 Pro 自动咨询
 
 [English](SKILL.en.md)
 

@@ -1,8 +1,8 @@
-# ChatGPT Pro
+# Codex AutoPro
 
 [English](README.en.md) · [Skill 规则](SKILL.md)
 
-让 Codex 经明确授权，通过已登录的 ChatGPT 网页咨询 GPT-6 Pro，并接续长时间等待。
+让 Codex 自动向网页版 ChatGPT Pro 提问、等待并取回回答，再结合你的任务核对建议。适合检查代码、分析难题或审查方案。
 
 - 每次发送一个已批准的问题；重试和追问需要授权。
 - 长任务交给宿主定时检查，保存完整回答和会话链接。
@@ -13,13 +13,13 @@
 将仓库克隆到个人 Skill 目录：
 
 ```sh
-git clone https://github.com/ByronZhang1021/chatgpt-pro.git ~/.agents/skills/chatgpt-pro
+git clone https://github.com/ByronZhang1021/codex-autopro.git ~/.agents/skills/codex-autopro
 ```
 
 ## 使用
 
 ```text
-$chatgpt-pro 请 GPT-6 Pro 审查这个方案。只发送一次，结合你的核验报告结论。
+$codex-autopro 请 GPT-6 Pro 审查这个方案。只发送一次，结合你的核验报告结论。
 ```
 
 需要宿主提供浏览器控制、已登录且能选择目标模型的账户；无人值守等待还需要定时调度和浏览器恢复能力。Skill 本身不提供这些能力，缺失时会明确报告。

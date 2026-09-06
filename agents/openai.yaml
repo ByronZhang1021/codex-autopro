@@ -1,6 +1,6 @@
 interface:
-  display_name: "网页 Pro 咨询 / ChatGPT Pro"
-  short_description: "经授权的网页 Pro 咨询 / Authorized browser consultation"
-  default_prompt: "使用 $chatgpt-pro 咨询我的问题一次，执行两分钟检查，默认用中文报告；需要时可切换英文。"
+  display_name: "Codex AutoPro · 网页 Pro 自动咨询"
+  short_description: "自动向网页 Pro 提问并取回答案 / Automate web Pro consultations"
+  default_prompt: "使用 $codex-autopro 自动向网页版 Pro 咨询我的问题，并结合任务核对回答。"
 policy:
   allow_implicit_invocation: false
