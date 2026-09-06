@@ -1,0 +1,6 @@
+interface:
+  display_name: "ChatGPT Pro / 网页 Pro 咨询"
+  short_description: "Authorized browser consultation / 经授权的网页 Pro 咨询"
+  default_prompt: "Use $chatgpt-pro to consult GPT-6 Pro on my question once, apply the two-minute review rule, and report in my language. / 使用网页 Pro 咨询我的问题一次，执行两分钟检查，并用我的语言报告。"
+policy:
+  allow_implicit_invocation: false
