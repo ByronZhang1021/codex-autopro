@@ -4,7 +4,7 @@
 
 Let Codex ask ChatGPT Pro in your browser, wait for the answer, and check its advice against your task. Useful for code reviews, difficult questions, and proposal reviews.
 
-- Sends one approved consultation; retries and follow-ups require authorization.
+- Consults automatically when complex work benefits from independent analysis, without prior approval; permits necessary same-problem follow-ups and at most one automatic retry after a confirmed failed send.
 - Hands long waits to a host scheduler and saves the answer and conversation link.
 - Pauses adoption of non-simple answers when thinking takes under two minutes or timing cannot be verified. This is a user-defined review rule, not proof of model quality or routing.
 
@@ -17,6 +17,8 @@ git clone https://github.com/ByronZhang1021/codex-autopro.git ~/.agents/skills/c
 ```
 
 ## Use
+
+Codex selects this skill automatically when useful, or you can invoke it explicitly. User restrictions on use, message count, and material take priority.
 
 ```text
 $codex-autopro Ask GPT-6 Pro to review this proposal. Send once and report its conclusions alongside your verification.

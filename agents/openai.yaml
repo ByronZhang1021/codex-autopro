@@ -3,4 +3,4 @@ interface:
   short_description: "自动向网页 Pro 提问并取回答案 / Automate web Pro consultations"
   default_prompt: "使用 $codex-autopro 自动向网页版 Pro 咨询我的问题，并结合任务核对回答。"
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true
