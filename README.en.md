@@ -6,6 +6,7 @@ Let Codex assign browser GPT-6 Pro analysis, code writing, or concrete deliverab
 
 - Collaborates automatically when complex analysis or implementation would benefit, without prior approval; permits necessary same-problem follow-ups and at most one automatic retry after a confirmed failed send.
 - Codex supplies context and specifies deliverables, then performs local edits, validation, and Git commits within the original task authorization.
+- Uploads code files, images, documents, and other material as needed; larger collections can be packaged as a ZIP, excluding secrets and unrelated content.
 - Hands long waits to a host scheduler and saves the answer and conversation link.
 - Pauses adoption of non-simple answers when thinking takes under two minutes or timing cannot be verified. This is a user-defined review rule, not proof of model quality or routing.
 
