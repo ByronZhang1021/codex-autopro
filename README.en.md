@@ -4,7 +4,7 @@
 
 Let Codex assign browser GPT-6 Pro analysis, code writing, or concrete deliverables, then retrieve, verify, and integrate the results. Codex decides the work and deliverable requirements; collaboration is not limited to advice.
 
-- Collaborates automatically when complex analysis or implementation would benefit, without prior approval; permits necessary same-problem follow-ups and at most one automatic retry after a confirmed failed send.
+- Collaborates automatically on very large or clearly complex tasks, difficult diagnoses, or major uncertainty in consequential decisions when substantial benefit is expected; no blocker is required. Handles routine tasks locally. Permits necessary same-problem follow-ups and at most one automatic retry after a confirmed failed send.
 - Codex supplies context and specifies deliverables, then performs local edits, validation, and Git commits within the original task authorization.
 - Uploads code files, images, documents, and other material as needed; larger collections can be packaged as a ZIP, excluding secrets and unrelated content.
 - Hands long waits to a host scheduler and saves the answer and conversation link.
@@ -20,7 +20,7 @@ git clone https://github.com/ByronZhang1021/codex-autopro.git ~/.agents/skills/c
 
 ## Use
 
-Codex selects this skill automatically when useful, or you can invoke it explicitly. User restrictions on use, message count, and material take priority.
+Codex handles routine tasks locally and selects this skill automatically when the scale or complexity above warrants it, or you can invoke it explicitly. User restrictions on use, message count, and material take priority.
 
 ```text
 $codex-autopro Ask GPT-6 Pro to review this proposal. Send once and report its conclusions alongside your verification.

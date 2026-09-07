@@ -1,6 +1,6 @@
 ---
 name: codex-autopro
-description: "Let Codex assign browser GPT-6 Pro analysis, code writing, or concrete deliverables, then retrieve, verify, and integrate the results. Use for complex problems, difficult diagnoses, proposal reviews, or implementation work without prior approval, and on explicit request. Do not use a model API."
+description: "Use browser GPT-6 Pro for very large or clearly complex tasks, difficult diagnoses, or major uncertainty in consequential decisions, when collaboration is warranted; also honor explicit requests. Handle routine tasks locally, not invoking merely because Pro might help. Do not use a model API."
 ---
 
 # Codex AutoPro
@@ -11,7 +11,7 @@ Use the host's browser controls with the user's own ChatGPT account. This skill 
 
 ## Automatic use and scope
 
-- Automatically arrange collaboration with web Pro when its analysis or concrete deliverables would materially help a complex problem, difficult diagnosis, consequential uncertainty, or implementation work in the current task. No prior approval is required. Briefly state the assigned work and benefit before sending, then proceed. Honor explicit requests directly. Handle simple tasks locally; do not send demonstration or test messages merely to exercise the skill.
+- Handle routine tasks locally by default. Automatically arrange Pro collaboration when a task is very large, clearly complex, difficult to diagnose, or involves major uncertainty in a consequential decision, and its analysis or deliverables are expected to substantially improve quality or efficiency. No prior approval, blocker, or repeated failed attempts are required. Do not invoke for ordinary edits, routine troubleshooting, or everyday proposal discussions merely because another assistant might help or could do the work. Before sending, briefly explain the scale or difficulty and expected benefit. Honor explicit requests directly. Do not send demonstration or test messages merely to exercise the skill.
 - Automatic use covers task-relevant questions, necessary uploads, and necessary follow-ups on the same problem or retries after confirmed failure. Honor user restrictions on Pro use, message count, material, or quota. Consultation never expands permission to modify the original task.
 - Send one consolidated question at a time. Follow up only for a concrete unresolved gap affecting the task conclusion when new evidence is expected. Retry a confirmed failed send at most once automatically, then report and stop. Inspect uncertain sends before acting; never blindly resend or repeatedly regenerate because an answer is unsatisfactory.
 - Fast answers and uncertain timing still pause for user review under the rules below. Automatic consultation does not bypass exception checks. Recovery and scheduled checks retain the recorded task scope and do not start new consultations.
